@@ -49,7 +49,7 @@ export default function UserAuthForm() {
         email: dataz.email,
         options: {
           // shouldCreateUser: false,
-          emailRedirectTo: "http://localhost:3000/dashboard",
+          emailRedirectTo: "http://localhost:3000/auth/callback",
         },
       });
       setMessage("Please check your inbox");
