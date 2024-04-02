@@ -14,7 +14,7 @@ export async function GET(request: NextRequest) {
   }
   
   // Replace 'productionBaseUrl' with your actual production base URL
-  const productionBaseUrl = 'https://next-shadcn-dashboard-starter-orpin.vercel.app'
+  const productionBaseUrl = 'http://localhost:3000/'
   const dashboardUrl = new URL('/dashboard', productionBaseUrl)
 
   // URL to redirect to after sign-in process completes
