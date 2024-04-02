@@ -22,7 +22,7 @@ export function DashboardNav({ items, setOpen }: DashboardNavProps) {
 
   const handleSignOut = async () => {
     await supabase.auth.signOut()
-    router.refresh()
+    router.push('/')
   }
 
   if (!items?.length) {
