@@ -13,9 +13,9 @@ export async function GET(request: NextRequest) {
     const supabase = createRouteHandlerClient({ cookies: () => cookieStore })
     await supabase.auth.exchangeCodeForSession(code)
   }
-  const productionBaseUrl = 'https://next-shadcn-dashboard-starter-orpin.vercel.app/'
-  const dashboardUrl = new URL('/dashboard', productionBaseUrl);
+  // const productionBaseUrl = 'https://next-shadcn-dashboard-starter-orpin.vercel.app/'
+  // const dashboardUrl = new URL('/dashboard', productionBaseUrl);
 
   // URL to redirect to after sign in process completes
-  return NextResponse.redirect(dashboardUrl.toString())
+  return NextResponse.redirect('https://next-shadcn-dashboard-starter-orpin.vercel.app/dashboard')
 }
