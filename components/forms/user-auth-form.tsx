@@ -49,12 +49,12 @@ export default function UserAuthForm() {
         email: dataz.email,
         options: {
           // shouldCreateUser: false,
-          emailRedirectTo: `${location.origin}/auth/callback`,
+          emailRedirectTo: 'https://next-shadcn-dashboard-starter-orpin.vercel.app/auth/callback',
         },
       });
       setMessage("Please check your inbox");
       if (data.session) {
-        router.push("/dashboard");
+        router.push("https://next-shadcn-dashboard-starter-orpin.vercel.app/dashboard");
       } else if (error) {
         setMessage(error.message);
         console.log("Sign-in error", error);
