@@ -49,7 +49,7 @@ export default function UserAuthForm() {
         email: dataz.email,
         options: {
           // shouldCreateUser: false,
-          emailRedirectTo: `${location.origin}/auth/callback`,
+          emailRedirectTo: 'https://next-shadcn-dashboard-starter-orpin.vercel.app/auth/callback/auth/callback',
         },
       });
       setMessage("Please check your inbox");
