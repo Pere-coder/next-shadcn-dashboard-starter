@@ -13,9 +13,8 @@ export async function GET(request: NextRequest) {
     await supabase.auth.exchangeCodeForSession(code)
   }
   
-  // Replace 'productionBaseUrl' with your actual production base URL
-  const productionBaseUrl = 'https://next-shadcn-dashboard-starter-orpin.vercel.app/'
-  const dashboardUrl = new URL('/dashboard', productionBaseUrl)
+
+  const dashboardUrl = new URL('https://tranquil-weld.vercel.app/dashboard/')
 
   // URL to redirect to after sign-in process completes
   return NextResponse.redirect(dashboardUrl.href)
